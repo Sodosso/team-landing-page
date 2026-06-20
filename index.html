@@ -53,7 +53,15 @@
         .trail-item { padding: 1rem; border-bottom: 1px solid #eee; font-size: 1.1rem; }
         .hidden { display: none; }
     </style>
-</head>
+</head>document.addEventListener("DOMContentLoaded", function() {
+  const modal = document.getElementById("forcedModal");
+  const continueBtn = document.getElementById("continueBtn");
+
+  // Forces the modal to disappear only when the button is clicked
+  continueBtn.addEventListener("click", function() {
+    modal.style.display = "none";
+  });
+});
 <body><div id="forcedModal" class="modal-overlay">
   <div class="modal-content">
     <h2>Notice</h2>
